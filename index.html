@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="main">
+    	<div class="umain1 df">
+    		<div class="uumain1">
+    			<div class="uuumain1">
+    				<button>50:50</button>
+    				<button>Звонок Другу</button>
+    				<button>Зрители</button>
+    			</div>
+    			<img src="logo.png">
+    		</div>
+    		<div class="uumain2">
+    			<div class="moneysheet ">
+    				<p class="m4">1000000</p>
+    				<p>900000</p>
+    				<p>800000</p>
+    				<p>750000</p>
+    				<p>500000</p>
+    				<p class="m3">450000</p>
+    				<p>350000</p>
+    				<p>300000</p>
+    				<p>200000</p>
+    				<p class="m2">150000</p>
+    				<p>10000</p>
+    				<p >6000</p>
+    				<p>4500</p>
+    				<p>3000</p>
+    				<p class="m1">1500</p>
+    			</div>
+    		</div>
+    	</div>
+    	<div class="umain2">
+    		<div class="fquestion br">
+    		<div class="uumain3">Кто хочет стать миллионером?</div>
+    		<div class="uumain4">
+    			<div class="df">
+    			<button class="correct1">a)Никто</button>
+    			<button class="incorrect">b)Я</button>
+    			</div>
+    			<div class="df">
+    			<button class="incorrect">c)Кто-то</button>
+    			<button class="incorrect">d)...</button>
+    			</div>
+    		</div>
+    		</div>
+
+            <div class="squestion br">
+            <div class="uumain3">Как звали старшую сестру императора Петра Первого?</div>
+            <div class="uumain4">
+                <div class="df">
+                <button class="incorrect">a)Надежда</button>
+                <button class="incorrect">b)Вера</button>
+                </div>
+                <div class="df">
+                <button class="correct2">c)Софья</button>
+                <button class="incorrect">d)Любовь</button>
+                </div>
+            </div>
+            </div>
+
+            <div class="tquestion br">
+            <div class="uumain3"> Какой врач первым в истории русской медицины применил гипсовую повязку?</div>
+            <div class="uumain4">
+                <div class="df">
+                <button class="incorrect">a)Субботин</button>
+                <button class="correct3">b)Пирогов</button>
+                </div>
+                <div class="df">
+                <button class="incorrect">c)Боткин</button>
+                <button class="incorrect">d)Склифосовский</button>
+                </div>
+            </div>
+            </div>
+
+            <div class="foquestion br">
+            <div class="uumain3">Что написал Данте?</div>
+            <div class="uumain4">
+                <div class="df">
+                <button class="correct4">a)"Божественную комедию"</button>
+                <button class="incorrect">b)"Божественную трагедию"</button>
+                </div>
+                <div class="df">
+                <button class="incorrect">c)"Божественную драму"</button>
+                <button class="incorrect">d)"Божественный фарс"</button>
+                </div>
+            </div>
+            </div>
+
+    		<div class="lose">
+    			<p>You lost</p>
+    		</div>
+
+    		<div class="win">
+    			<p>You won million, of pennies</p>
+    		</div>
+
+    	</div>
+    </div>
+    <script type="text/javascript">
+    	let fquestion= document.querySelector('.fquestion')
+        let squestion= document.querySelector('.squestion')
+        let tquestion= document.querySelector('.tquestion')
+        let foquestion= document.querySelector('.foquestion')
+    	let incorrectanswer= document.querySelectorAll('.incorrect')
+    	let correctanswer1 = document.querySelector('.correct1')
+        let correctanswer2 = document.querySelector('.correct2')
+        let correctanswer3 = document.querySelector('.correct3')
+        let correctanswer4 = document.querySelector('.correct4')
+    	let lose = document.querySelector('.lose')
+    	let win = document.querySelector('.win')
+        let m1 = document.querySelector('.m1')
+        let m2 = document.querySelector('.m2')
+        let m3 = document.querySelector('.m3')
+        let m4 = document.querySelector('.m4')
+
+		for(i=0;i<incorrectanswer.length;i++){
+    	incorrectanswer[i].onclick=function(){
+    		fquestion.style.display='none'
+            squestion.style.display='none'
+            tquestion.style.display='none'
+            foquestion.style.display='none'
+    		lose.style.display='block'
+    	}
+    }
+    	correctanswer1.onclick=function(){
+    		fquestion.style.display='none'
+            squestion.style.display='block'
+            m1.style.background='none'
+            m2.style.background='purple'
+    	}
+        correctanswer2.onclick=function(){
+            squestion.style.display='none'
+            tquestion.style.display='block'
+             m2.style.background='none'
+             m3.style.background='purple'
+        }
+        correctanswer3.onclick=function(){
+            tquestion.style.display='none'
+            foquestion.style.display='block'
+             m3.style.background='none'
+             m4.style.background='purple'
+        }
+        correctanswer4.onclick=function(){
+            foquestion.style.display='none'
+            m4.style.background='gold'
+            alert('Вы выиграли миллион!')
+            win.style.display="block"
+        }
+    </script>
+</body>
+</html>
